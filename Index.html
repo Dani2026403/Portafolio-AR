@@ -1,0 +1,22 @@
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.2/dist/mindar-image-aframe.prod.js"></script>
+  </head>
+  <body>
+    <a-scene mindar-image="imageTargetSrc: targets.mind" 
+             color-space="sRGB" embedded arjs="sourceType: webcam" vr-mode-ui="enabled: false">
+      
+      <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
+
+      <!-- Cuando detecte tu tarjeta, muestra esto -->
+      <a-entity mindar-image-target="targetIndex: 0">
+        <!-- Texto -->
+        <a-text value="Actividad Portfolio" position="0 0.5 0" align="center" color="white"></a-text>
+        <!-- Modelo 3D -->
+        <a-gltf-model src="assets/modelo.glb" position="0 0 0" scale="0.5 0.5 0.5"></a-gltf-model>
+      </a-entity>
+
+    </a-scene>
+  </body>
+</html>
